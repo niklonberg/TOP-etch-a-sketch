@@ -4,15 +4,13 @@ body {
 }
 
 .grid-container {
-  margin: 5% 5%;
   background-color: yellow;
   display: flex;
   flex-flow: row wrap;
 }
 
 .grid-item {
-  height: 50px;
-  width: 50px;
-  margin: 10px;
+  width: 6.25%;
+  padding-bottom: 6.25%;
   background-color: red;
 }
