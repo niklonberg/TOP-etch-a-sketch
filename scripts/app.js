@@ -4,6 +4,7 @@ function createGridDivs() {
   for (let i = 0; i < 16; i++) {
       const div = document.createElement("div");
       div.textContent = "test";
+      div.classList.add("grid-item");
       gridContainer.appendChild(div);
   }
 }
