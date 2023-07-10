@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+}
+
+div {
+  height: 10%;
+  width: 10%;
+  background-color: red;
+}
