@@ -5,6 +5,7 @@ body {
 
 .grid-container {
   background-color: yellow;
+  margin: 80px 80px;
   display: flex;
   flex-flow: row wrap;
 }
