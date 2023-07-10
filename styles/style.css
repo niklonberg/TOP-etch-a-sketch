@@ -1,5 +1,11 @@
 body {
-    background-color: black;
+  background-color: black;
+  margin: 0;
+}
+
+.grid-container {
+  margin: 5% 5%;
+  background-color: yellow;
 }
 
 .grid-item {
