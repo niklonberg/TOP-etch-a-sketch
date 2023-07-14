@@ -1,6 +1,6 @@
 
 /* references **********************************/
-
+const styleSheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
 const rowAmtInput = document.querySelector('#input-div');
 const requestSubmit = document.querySelector('#request-div');
 const gridContainer = document.querySelector(".grid-container");
@@ -20,11 +20,7 @@ function createGridItem() {
 }
 
 function setGridItemFlexbasis(gridObj) {
-  const styleSheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
-  console.log(styleSheet)
-
   const cssRules = styleSheet.rules;
-  console.log(cssRules);
 
   for (let i = 0; i < cssRules.length; i++) {
   
