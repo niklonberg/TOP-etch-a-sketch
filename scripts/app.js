@@ -14,6 +14,9 @@ function getDivAmount() {
 }
 
 function createGridDivs() {
+  const totalDivsAmt = getDivAmount()
+  
+
   for (let i = 0; i < 20; i++) {
       const div = document.createElement("div");
       // div.textContent = "test";
@@ -24,7 +27,7 @@ function createGridDivs() {
 
 /* event listeners *****************************/
 
-requestSubmit.addEventListener('click', getDivAmount);
+requestSubmit.addEventListener('click', createGridDivs);
 
 /* app *****************************************/
 createGridDivs();
