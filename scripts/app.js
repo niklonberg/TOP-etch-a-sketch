@@ -8,14 +8,14 @@ const gridContainer = document.querySelector(".grid-container");
 /* functions  **********************************/
 
 function getDivAmount() {
-  const requestAmt = amountOfDivsInput.value;
-  const gridDivs = requestAmt * 2;
-  return gridDivs;
+  const rowAmt = amountOfDivsInput.value;
+  const totalDivsAmt = rowAmt * rowAmt;
+  return {rowAmt, totalDivsAmt};
 }
 
 function createGridDivs() {
-  const totalDivsAmt = getDivAmount()
-  
+  const divObj = getDivAmount()
+  console.log(divObj);
 
   for (let i = 0; i < 20; i++) {
       const div = document.createElement("div");
