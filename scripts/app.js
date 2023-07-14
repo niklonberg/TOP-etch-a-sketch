@@ -24,7 +24,7 @@ function setFlex(divObj) {
   console.log(styleSheet)
 
   const cssRules = styleSheet.rules;
-  console.log(rules);
+  console.log(cssRules);
 
   for (let i = 0; i < cssRules.length; i++) {
   
