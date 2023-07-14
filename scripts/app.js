@@ -19,13 +19,28 @@ function createDiv() {
   return divItem;
 }
 
+function setFlex(divObj) {
+  const styleSheet = document.querySelector('link[href="/styles/style.css"]').sheet;
+  console.log(styleSheet)
+
+  const cssRules = styleSheet.rules;
+  console.log(rules);
+
+  for (let i = 0; i < cssRules.length; i++) {
+  
+  }
+}
+
 function createGridDivs() {
-  const divObj = getDivAmount()
+  const divObj = getDivAmount();
+  const divItem = createDiv();
+
+  setFlex(divObj);
 
   for (let i = 0; i < divObj.totalDivsAmt; i++) {
 
     
-      gridContainer.appendChild(div);
+      gridContainer.appendChild(divItem);
   }
 }
 
@@ -34,4 +49,4 @@ function createGridDivs() {
 requestSubmit.addEventListener('click', createGridDivs);
 
 /* app *****************************************/
-createGridDivs();
+/* createGridDivs(); */
