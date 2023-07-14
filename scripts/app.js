@@ -31,7 +31,7 @@ function setGridItemFlexbasis(gridObj) {
   }
 }
 
-function createGridDivs() {
+function createGrid() {
   const gridObj = getGridItemAmount();
   const gridItem = createGridItem();
 
@@ -45,7 +45,10 @@ function createGridDivs() {
 
 /* event listeners *****************************/
 
-requestSubmit.addEventListener('click', createGridDivs);
+requestSubmit.addEventListener('click', () => {
+  gridContainer.innerHTML = ""
+  createGrid();
+});
 
 /* app *****************************************/
 /* createGridDivs(); */
