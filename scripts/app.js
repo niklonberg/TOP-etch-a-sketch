@@ -22,7 +22,6 @@ function createGridItem() {
 function setGridItemFlexbasis(gridObj) {
   const gridItemRules = gridItemStylesheet.cssRules || gridItemStylesheet.rules;
   const flexBasisVal = 100 / gridObj.rowAmt;
-  console.log(flexBasisVal)
 
   for (let i = 0; i < gridItemRules.length; i++) {
     if (gridItemRules[i].selectorText === ".grid-item") {
@@ -51,4 +50,4 @@ requestSubmit.addEventListener('click', () => {
 });
 
 /* app *****************************************/
-/* createGridDivs(); */
+createGrid()
