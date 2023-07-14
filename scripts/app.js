@@ -38,7 +38,8 @@ function createGridDivs() {
   setGridItemFlexbasis(gridObj);
 
   for (let i = 0; i < gridObj.totalGridItems; i++) {
-    
+    const item = gridItem.cloneNode(true);
+    gridContainer.appendChild(item)
   }
 }
 
