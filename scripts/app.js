@@ -13,14 +13,18 @@ function getDivAmount() {
   return {rowAmt, totalDivsAmt};
 }
 
+function createDiv() {
+  const divItem = document.createElement("div");
+  divItem.classList.add("grid-item");
+  return divItem;
+}
+
 function createGridDivs() {
   const divObj = getDivAmount()
-  console.log(divObj);
 
   for (let i = 0; i < divObj.totalDivsAmt; i++) {
-      const div = document.createElement("div");
-      // div.textContent = "test";
-      div.classList.add("grid-item");
+
+    
       gridContainer.appendChild(div);
   }
 }
