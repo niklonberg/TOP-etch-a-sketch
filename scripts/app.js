@@ -1,6 +1,11 @@
+
+/* references **********************************/
+
 const amountOfDivsInput = document.querySelector('#input-div');
-const requestInput = document.querySelector('#request-div');
+const requestSubmit = document.querySelector('#request-div');
 const gridContainer = document.querySelector(".grid-container");
+
+/* functions  **********************************/
 
 function getDivAmount() {
   const requestAmt = amountOfDivsInput.value;
@@ -17,4 +22,9 @@ function createGridDivs() {
   }
 }
 
+/* event listeners *****************************/
+
+requestSubmit.addEventListener('click', getDivAmount);
+
+/* app *****************************************/
 createGridDivs();
