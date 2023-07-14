@@ -20,7 +20,7 @@ function createDiv() {
 }
 
 function setFlex(divObj) {
-  const styleSheet = document.querySelector('link[href="/styles/style.css"]').sheet;
+  const styleSheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
   console.log(styleSheet)
 
   const cssRules = styleSheet.rules;
