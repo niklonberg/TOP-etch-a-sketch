@@ -3,7 +3,9 @@ const requestInput = document.querySelector('#request-div');
 const gridContainer = document.querySelector(".grid-container");
 
 function getDivAmount() {
-  const amt = amountOfDivsInput.value;
+  const requestAmt = amountOfDivsInput.value;
+  const gridDivs = requestAmt * 2;
+  return gridDivs;
 }
 
 function createGridDivs() {
