@@ -1,25 +1,25 @@
 
 /* references **********************************/
 
-const amountOfDivsInput = document.querySelector('#input-div');
+const rowAmtInput = document.querySelector('#input-div');
 const requestSubmit = document.querySelector('#request-div');
 const gridContainer = document.querySelector(".grid-container");
 
 /* functions  **********************************/
 
-function getDivAmount() {
-  const rowAmt = amountOfDivsInput.value;
-  const totalDivsAmt = rowAmt * rowAmt;
-  return {rowAmt, totalDivsAmt};
+function getGridItemAmount() {
+  const rowAmt = rowAmtInput.value;
+  const totalGridItems = rowAmt * rowAmt;
+  return {rowAmt, totalGridItems};
 }
 
-function createDiv() {
-  const divItem = document.createElement("div");
-  divItem.classList.add("grid-item");
-  return divItem;
+function createGridItem() {
+  const gridItem = document.createElement("div");
+  gridItem.classList.add("grid-item");
+  return gridItem;
 }
 
-function setFlex(divObj) {
+function setGridItemFlexbasis(gridObj) {
   const styleSheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
   console.log(styleSheet)
 
@@ -32,15 +32,13 @@ function setFlex(divObj) {
 }
 
 function createGridDivs() {
-  const divObj = getDivAmount();
-  const divItem = createDiv();
+  const gridObj = getGridItemAmount();
+  const gridItem = createGridItem();
 
-  setFlex(divObj);
+  setGridItemFlexbasis(gridObj);
 
-  for (let i = 0; i < divObj.totalDivsAmt; i++) {
-
+  for (let i = 0; i < gridObj.totalGridItems; i++) {
     
-      gridContainer.appendChild(divItem);
   }
 }
 
