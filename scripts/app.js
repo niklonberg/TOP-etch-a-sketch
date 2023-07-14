@@ -17,7 +17,7 @@ function createGridDivs() {
   const divObj = getDivAmount()
   console.log(divObj);
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < divObj.totalDivsAmt; i++) {
       const div = document.createElement("div");
       // div.textContent = "test";
       div.classList.add("grid-item");
