@@ -10,6 +10,7 @@ const gridContainer = document.querySelector(".grid-container");
 function getGridItemAmount() {
   const rowAmt = rowAmtInput.value;
   const totalGridItems = rowAmt * rowAmt;
+  console.log(rowAmt)
   return {rowAmt, totalGridItems};
 }
 
