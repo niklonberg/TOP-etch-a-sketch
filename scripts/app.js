@@ -1,9 +1,11 @@
 
 /* references **********************************/
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
-const rowAmtInput = document.querySelector('#input-div');
-const requestSubmit = document.querySelector('#request-div');
+const rowAmtInput = document.querySelector('#range-items');
+const rangeValueSpan = document.querySelector('#range-value');
+const requestSubmit = document.querySelector('#request-items');
 const gridContainer = document.querySelector(".grid-container");
+
 
 /* functions  **********************************/
 
