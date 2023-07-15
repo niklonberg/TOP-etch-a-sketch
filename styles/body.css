@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  color: #fff;
+  animation: color-morph 100s infinite;
+}
+
+@keyframes color-morph {
+  0% {
+    background-color: black;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+  }
+}
