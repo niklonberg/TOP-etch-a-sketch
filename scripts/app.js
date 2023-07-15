@@ -11,7 +11,6 @@ const gridContainer = document.querySelector(".grid-container");
 function getGridItemAmount() {
   const rowAmt = rowAmtInput.value;
   const totalGridItems = rowAmt * rowAmt;
-  console.log(rowAmt)
   return {rowAmt, totalGridItems};
 }
 
@@ -33,7 +32,7 @@ function setGridItemFlexbasis(gridObj) {
 }
 
 function createGrid() {
-  rangeValueSpan.textContent = rowAmtInput.value;
+  rangeValueSpan.textContent = `${rowAmtInput.value} x ${rowAmtInput.value}`;
 
   const gridObj = getGridItemAmount();
   const gridItem = createGridItem();
@@ -51,6 +50,12 @@ function createGrid() {
 rowAmtInput.addEventListener('input', () => {
   gridContainer.innerHTML = "";
   createGrid();
+});
+
+gridContainer.addEventListener('mouseover', (event) => {
+  if (event.target.className === 'grid-item') {
+    event.target.style.backgroundColor = 'black'
+  }
 });
 
 /* app *****************************************/
