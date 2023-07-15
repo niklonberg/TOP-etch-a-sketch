@@ -11,9 +11,11 @@
     <main class="container main-flex">
         <h1>Etch - a - Sketch</h1>
         <div class='grid-container'></div>
-        <label for="input-div">Add length of row</label>
-        <input type="range" id="range-items" value="16" min="2" max="100"></input>
-        <span id="range-value"></span>
+        <div class="slider col">
+            <label for="input-div">Length of row</label>
+            <input type="range" id="range-items" value="16" min="2" max="100"></input>
+            <span id="range-value"></span>
+        </div>
         <input type="submit" id="request-items" value="Request">
         <div class="button-modes">
             <button>Color Mode</button>
