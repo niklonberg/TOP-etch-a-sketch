@@ -34,6 +34,8 @@ function setGridItemFlexbasis(gridObj) {
 }
 
 function createGrid() {
+  rangeValueSpan.textContent = rowAmtInput.value;
+  
   const gridObj = getGridItemAmount();
   const gridItem = createGridItem();
 
@@ -48,7 +50,7 @@ function createGrid() {
 /* event listeners *****************************/
 
 requestSubmit.addEventListener('click', () => {
-  gridContainer.innerHTML = ""
+  gridContainer.innerHTML = "";
   createGrid();
 });
 
