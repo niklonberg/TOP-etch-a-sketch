@@ -3,7 +3,6 @@
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
 const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
-const requestSubmit = document.querySelector('#request-items');
 const gridContainer = document.querySelector(".grid-container");
 
 
@@ -35,7 +34,7 @@ function setGridItemFlexbasis(gridObj) {
 
 function createGrid() {
   rangeValueSpan.textContent = rowAmtInput.value;
-  
+
   const gridObj = getGridItemAmount();
   const gridItem = createGridItem();
 
@@ -49,7 +48,7 @@ function createGrid() {
 
 /* event listeners *****************************/
 
-requestSubmit.addEventListener('click', () => {
+rowAmtInput.addEventListener('input', () => {
   gridContainer.innerHTML = "";
   createGrid();
 });
