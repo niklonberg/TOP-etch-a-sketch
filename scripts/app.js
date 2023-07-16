@@ -54,12 +54,14 @@ function createGrid() {
   }
 }
 
-function setMode() {
-  for (const key in modeMang)
-    switch(modeMang[key]) {
-      case true:
-
+function setMode(button) {
+  for (const key in modeMang) {
+    if (key === 'colorMode') {
+      modeMang[key] = true;
+    } else {
+      modeMang[key] = false;
     }
+  }
 }
 
 /* main event listeners *****************************/
@@ -76,9 +78,7 @@ gridContainer.addEventListener('mouseover', (event) => {
 });
 
 colorModeBtn.addEventListener('click', () => {
-  modeMang.colorMode = true;
-  modeMang.rainbowMode = false;
-  modeMang.eraserMode = false;
+  
   console.log(modeMang);
 });
 
