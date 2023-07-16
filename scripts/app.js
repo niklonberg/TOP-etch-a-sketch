@@ -9,13 +9,7 @@ const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.c
 const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
-
 const buttonModes = document.querySelector(".button-modes");
-
-/* const colorModeBtn = document.getElementById('color-btn');
-const rainBowModeBtn = document.getElementById('rainbow-btn');
-const eraserModeBtn = document.getElementById('eraser-btn'); */
-
 
 /* functions  **********************************/
 
@@ -56,18 +50,6 @@ function createGrid() {
   }
 }
 
-function setMode(event) {
-  const eventKey = event.target.dataset.key
-
-  for (const key in modeMang) {
-    if (key === eventKey) {
-      modeMang[key] = true;
-    } else {
-      modeMang[key] = false;
-    }
-  }
-}
-
 /* main event listeners *****************************/
 
 rowAmtInput.addEventListener('input', () => {
@@ -82,11 +64,11 @@ gridContainer.addEventListener('mouseover', (event) => {
 });
 
 buttonModes.addEventListener('click', (event) => {
-  setMode(event)
+  modeMang.setMode(event)
   console.log(event)
   console.log(modeMang);
 })
 
 /* app *****************************************/
-createGrid()
+createGrid();
 
