@@ -12,7 +12,11 @@ const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.c
 const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
-
+const buttonCollection = {
+  colorModeBtn: document.querySelector('#color-btn'),
+  rainBowModeBtn: document.querySelector('#rainbow-btn'),
+  eraserModeBtn: document.querySelector('#eraser-btn'),
+};
 
 /* functions  **********************************/
 
