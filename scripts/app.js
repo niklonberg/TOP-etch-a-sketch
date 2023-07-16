@@ -10,9 +10,11 @@ const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
 
-const colorModeBtn = document.getElementById('color-btn');
+const buttonModes = document.querySelector(".button-modes");
+
+/* const colorModeBtn = document.getElementById('color-btn');
 const rainBowModeBtn = document.getElementById('rainbow-btn');
-const eraserModeBtn = document.getElementById('eraser-btn');
+const eraserModeBtn = document.getElementById('eraser-btn'); */
 
 
 /* functions  **********************************/
