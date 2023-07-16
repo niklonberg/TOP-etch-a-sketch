@@ -1,7 +1,7 @@
 :root {
   --color1: rgb(44, 0, 60);
-  --color2: rgb(77, 15, 105);
-  --color3: rgb(114, 40, 128);
+  --color2: rgb(40, 15, 122);
+  --color3: rgb(107, 33, 122);
   --gradient: linear-gradient(90deg, var(--color1), var(--color2), var(--color3));
 }
 

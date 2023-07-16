@@ -53,7 +53,7 @@ rowAmtInput.addEventListener('input', () => {
 });
 
 gridContainer.addEventListener('mouseover', (event) => {
-  if (event.target.tagName === 'DIV') {
+  if (event.target.className === 'grid-item') {
     event.target.style.backgroundColor = 'black'
   }
 });
