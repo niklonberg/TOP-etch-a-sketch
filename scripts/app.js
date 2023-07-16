@@ -53,7 +53,7 @@ function createGrid() {
   }
 }
 
-/* event listeners *****************************/
+/* main event listeners *****************************/
 
 rowAmtInput.addEventListener('input', () => {
   gridContainer.innerHTML = "";
