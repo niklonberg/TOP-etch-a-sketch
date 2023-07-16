@@ -70,6 +70,17 @@ gridContainer.addEventListener('mouseover', (event) => {
   }
 });
 
+colorModeBtn.addEventListener('click', () => {
+  console.log('i fired');
+});
+
+rainBowModeBtn.addEventListener('click', () => {
+  console.log('i fired');
+});
+
+eraserModeBtn.addEventListener('click', () => {
+  console.log('i fired');
+});
 /* app *****************************************/
 createGrid()
 
