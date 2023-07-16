@@ -5,3 +5,5 @@ class ModeManager {
     this.eraserMode = document.getElementById('eraser-btn');
   }
 }
+
+export default ModeManager

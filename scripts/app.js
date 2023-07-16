@@ -1,3 +1,11 @@
+/* import */
+import ModeManager from "../service/ModeManager.js"
+
+/* class instantiation */
+document.addEventListener("DOMContentLoaded", () => {
+  const modeMang = new ModeManager()
+  console.log(modeMang);
+});
 
 /* references **********************************/
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
@@ -60,3 +68,4 @@ gridContainer.addEventListener('mouseover', (event) => {
 
 /* app *****************************************/
 createGrid()
+
