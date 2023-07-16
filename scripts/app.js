@@ -2,10 +2,7 @@
 import ModeManager from "../service/ModeManager.js"
 
 /* class instantiation */
-document.addEventListener("DOMContentLoaded", () => {
-  const modeMang = new ModeManager()
-  console.log(modeMang);
-});
+const modeMang = new ModeManager()
 
 /* references **********************************/
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
@@ -57,6 +54,14 @@ function createGrid() {
   }
 }
 
+function setMode() {
+  for (const key in modeMang)
+    switch(modeMang[key]) {
+      case true:
+
+    }
+}
+
 /* main event listeners *****************************/
 
 rowAmtInput.addEventListener('input', () => {
@@ -71,15 +76,24 @@ gridContainer.addEventListener('mouseover', (event) => {
 });
 
 colorModeBtn.addEventListener('click', () => {
-  console.log('i fired');
+  modeMang.colorMode = true;
+  modeMang.rainbowMode = false;
+  modeMang.eraserMode = false;
+  console.log(modeMang);
 });
 
 rainBowModeBtn.addEventListener('click', () => {
-  console.log('i fired');
+  modeMang.colorMode = false;
+  modeMang.rainbowMode = true;
+  modeMang.eraserMode = false;
+  console.log(modeMang);
 });
 
 eraserModeBtn.addEventListener('click', () => {
-  console.log('i fired');
+  modeMang.colorMode = false;
+  modeMang.rainbowMode = false;
+  modeMang.eraserMode = true;
+  console.log(modeMang);
 });
 /* app *****************************************/
 createGrid()
