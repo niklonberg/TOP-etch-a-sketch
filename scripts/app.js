@@ -54,9 +54,11 @@ function createGrid() {
   }
 }
 
-function setMode(button) {
+function setMode(event) {
+  const eventKey = event.target.dataset.key
+
   for (const key in modeMang) {
-    if (key === 'colorMode') {
+    if (key === eventKey) {
       modeMang[key] = true;
     } else {
       modeMang[key] = false;
@@ -77,22 +79,21 @@ gridContainer.addEventListener('mouseover', (event) => {
   }
 });
 
-colorModeBtn.addEventListener('click', () => {
-  
+colorModeBtn.addEventListener('click', (event) => {
+  setMode(event)
+  console.log(event)
+console.log(modeMang);
+});
+
+rainBowModeBtn.addEventListener('click', (event) => {
+  setMode(event)
+  console.log(event)
   console.log(modeMang);
 });
 
-rainBowModeBtn.addEventListener('click', () => {
-  modeMang.colorMode = false;
-  modeMang.rainbowMode = true;
-  modeMang.eraserMode = false;
-  console.log(modeMang);
-});
-
-eraserModeBtn.addEventListener('click', () => {
-  modeMang.colorMode = false;
-  modeMang.rainbowMode = false;
-  modeMang.eraserMode = true;
+eraserModeBtn.addEventListener('click', (event) => {
+  setMode(event)
+  console.log(event)
   console.log(modeMang);
 });
 /* app *****************************************/
