@@ -66,9 +66,10 @@ gridContainer.addEventListener('mouseover', (event) => {
 });
 
 buttonModes.addEventListener('click', (event) => {
-  modeMang.setMode(event)
-  console.log(event)
-  console.log(modeMang);
+  modeMang.setModeKeys(event)
+
+  
+
 })
 
 /* app *****************************************/

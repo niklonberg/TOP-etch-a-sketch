@@ -5,7 +5,7 @@ class ModeManager {
     this.eraserMode = false;
   }
 
-  setMode(event) {
+  setModeKeys(event) {
     const eventKey = event.target.dataset.key
   
     for (const key in this) {
@@ -15,6 +15,9 @@ class ModeManager {
         this[key] = false;
       }
     }
+  }
+
+  setMode() {
   }
 }
 
