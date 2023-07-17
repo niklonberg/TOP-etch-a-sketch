@@ -67,3 +67,4 @@ buttonModes.addEventListener('click', (event) => {
 /* app *****************************************/
 createGrid();
 
+
