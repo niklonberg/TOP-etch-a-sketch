@@ -59,19 +59,9 @@ rowAmtInput.addEventListener('input', () => {
   createGrid();
 });
 
-/* gridContainer.addEventListener('mouseover', (event) => {
-  if (event.target.className === 'grid-item') {
-    colorMang.colorMode(event);
-  }
-}); */
-
 buttonModes.addEventListener('click', (event) => {
   modeMang.setModeKeys(event)
-
-  
   modeMang.setMode(gridContainer, colorMang)
-  
-
 })
 
 /* app *****************************************/

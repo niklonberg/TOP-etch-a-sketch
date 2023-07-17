@@ -3,7 +3,7 @@ class ColorManager {
   }
 
   colorMode(event) {
-    event.target.style.backgroundColor = 'black'
+    event.target.style.backgroundColor = 'white'
   }
 
   rainbowMode (event) {

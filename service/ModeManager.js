@@ -33,15 +33,3 @@ class ModeManager {
 }
 
 export default ModeManager
-
-  /* if (modeMang.colorMode) {
-
-  }
-
-  if (modeMang.rainbowMode) {
-
-  }
-
-  if (modeMang.eraserMode) {
-
-  } */
