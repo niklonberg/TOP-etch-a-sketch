@@ -2,7 +2,8 @@ class ColorManager {
   constructor() {
   }
 
-  colorMode() {
+  colorMode(event) {
+    event.target.style.backgroundColor = 'black'
   }
 
   rainbowMode () {

@@ -1,8 +1,10 @@
 /* import */
-import ModeManager from "../service/ModeManager.js"
+import ModeManager from "../service/ModeManager.js";
+import ColorManager from "../service/ColorManager.js";
 
 /* class instantiation */
 const modeMang = new ModeManager()
+const colorMang = new ColorManager()
 
 /* references **********************************/
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
@@ -59,7 +61,7 @@ rowAmtInput.addEventListener('input', () => {
 
 gridContainer.addEventListener('mouseover', (event) => {
   if (event.target.className === 'grid-item') {
-    event.target.style.backgroundColor = 'black'
+    colorMang.colorMode(event);
   }
 });
 
