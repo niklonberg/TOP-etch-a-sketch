@@ -6,10 +6,12 @@ class ColorManager {
     event.target.style.backgroundColor = 'black'
   }
 
-  rainbowMode () {
+  rainbowMode (event) {
+    event.target.style.backgroundColor = 'red'
   }
 
-  eraserMode () {
+  eraserMode (event) {
+    event.target.style.backgroundColor = 'green'
   }
 }
 
