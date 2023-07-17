@@ -17,7 +17,22 @@ class ModeManager {
     }
   }
 
-  setMode() {
+  setMode(element, manager) {
+    element.addEventListener('mouseover', (event) => {
+      if (event.target.className === 'grid-item') {
+        if (manager.colorMode) {
+          manager.colorMode(event);
+        } else if (manager.rainbowMode) {
+          manager.rainbowMode(event);
+        } else if (manager.eraserMode) {
+          manager.eraserMode(event)
+        }
+      }
+    });
+  }
+
+  removeMode() {
+
   }
 }
 
