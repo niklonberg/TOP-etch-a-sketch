@@ -61,10 +61,7 @@ rowAmtInput.addEventListener('input', () => {
 
 buttonModes.addEventListener('click', (event) => {
   modeMang.setModeKeys(event)
-  modeMang.setMode(gridContainer, colorMang)
-})
-
-
+});
 
 /* app *****************************************/
 createGrid();
