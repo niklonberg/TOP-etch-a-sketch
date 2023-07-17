@@ -64,7 +64,8 @@ buttonModes.addEventListener('click', (event) => {
   modeMang.setMode(gridContainer, colorMang)
 })
 
+
+
 /* app *****************************************/
 createGrid();
-
 
