@@ -6,10 +6,10 @@ class ModeManager {
   }
 
   setModeKeys(event) {
-    const eventKey = event.target.dataset.key
+    const eventElementDataKey = event.target.dataset.key
   
     for (const key in this) {
-      if (key === eventKey) {
+      if (key === eventElementDataKey) {
         this[key] = true;
       } else {
         this[key] = false;
@@ -18,7 +18,6 @@ class ModeManager {
   }
 
   setMode(element, manager) {
-    console.log(manager)
     element.addEventListener('mouseover', (event) => {
       if (event.target.className === 'grid-item') {
         if (this.colorMode) {
@@ -30,10 +29,6 @@ class ModeManager {
         }
       }
     });
-  }
-
-  removeMode() {
-
   }
 }
 
