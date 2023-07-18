@@ -67,6 +67,7 @@ buttonModes.addEventListener('click', (event) => {
 gridContainer.addEventListener('click', (event) => {
   const element = event.target
   let mode;
+
   if (modeMang.colorMode) {
     mode = colorMang.colorMode;
   } else if (modeMang.rainbowMode) {
@@ -75,7 +76,7 @@ gridContainer.addEventListener('click', (event) => {
     mode = colorMang.eraserMode;
   }
 
-  if (element.className === "grid-item") {
+  if (element.classList.contains("grid-item")) {
     console.log(event)
     mode(element)
   }
