@@ -1,5 +1,5 @@
 .grid-item {
-  background-color: black;
+  background-color: rgb(180, 178, 178);
   flex-grow: 0;
   flex-shrink: 1;
 }
@@ -13,5 +13,5 @@
 }
 
 .outline {
-  outline: 1px solid rgb(0, 199, 0);
+  outline: 1px solid rgb(0, 0, 0);
 }

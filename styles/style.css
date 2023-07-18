@@ -11,6 +11,14 @@ h2 {
   margin-top: -2rem;
 }
 
+p, label, span {
+  font-size: 1.3rem;
+}
+
+input[type="range"] {
+    accent-color: rgb(33, 225, 221);
+}
+
 .container {
   width: 80%;
   max-width: 1200px;

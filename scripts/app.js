@@ -25,7 +25,7 @@ function getGridItemAmount() {
 
 function createGridItem() {
   const gridItem = document.createElement("div");
-  gridItem.classList.add("grid-item");
+  gridItem.classList.add("grid-item", "outline");
   return gridItem;
 }
 
