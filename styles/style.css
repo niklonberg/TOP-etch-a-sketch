@@ -9,6 +9,7 @@ h1 {
 h2 {
   text-align: center;
   margin-top: -2rem;
+  margin-bottom: -1.2rem;
 }
 
 p, label, span {
@@ -16,7 +17,16 @@ p, label, span {
 }
 
 input[type="range"] {
-    accent-color: rgb(33, 225, 221);
+  accent-color: rgb(33, 225, 221);
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: .08rem;
+  padding: .5rem 1.25rem;
+  border-radius: 1000px;
 }
 
 .container {
@@ -49,4 +59,12 @@ input[type="range"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.button-modes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid red;
 }
