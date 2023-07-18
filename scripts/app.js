@@ -13,7 +13,7 @@ const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
 const buttonModes = document.querySelector(".button-modes");
 const clearBtn = document.querySelector("#clear-btn");
-const toggleBtn = document.querySelector("#toggle-grid-btn");
+const toggleGridBtn = document.querySelector("#toggle-grid-btn");
 
 /* functions  **********************************/
 
@@ -79,6 +79,13 @@ clearBtn.addEventListener('click', () => {
   const gridChildElements = gridContainer.childNodes;
   gridChildElements.forEach((child) => {
     child.className = "grid-item";
+  })
+})
+
+toggleGridBtn.addEventListener('click', () => {
+  const gridChildElements = gridContainer.childNodes;
+  gridChildElements.forEach((child) => {
+    child.classList.toggle('outline');
   })
 })
 
