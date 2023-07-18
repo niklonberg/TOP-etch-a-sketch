@@ -14,6 +14,7 @@ const gridContainer = document.querySelector(".grid-container");
 const buttonModes = document.querySelector(".button-modes");
 const clearBtn = document.querySelector("#clear-btn");
 const toggleGridBtn = document.querySelector("#toggle-grid-btn");
+const incrementDarkenBtn = document.querySelector("#increment-btn");
 
 /* functions  **********************************/
 
@@ -66,8 +67,8 @@ buttonModes.addEventListener('click', (event) => {
   btnElements.forEach(element => {
     element.classList.remove('active-btn')
   })
-
   event.target.classList.add('active-btn')
+  
   modeMang.setModeKeys(event)
   drawMode = modeMang.setMode(colorMang)
 });
@@ -76,9 +77,12 @@ gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target
 
   if (element.classList.contains("grid-item")) {
-    console.log(event)
     drawMode(element)
   }
+})
+
+incrementDarkenBtn.addEventListener('click', () => {
+
 })
 
 clearBtn.addEventListener('click', () => {

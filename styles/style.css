@@ -28,7 +28,8 @@ button {
   padding: .5rem 1.25rem;
   border-radius: 1000px;
   border: none;
-  box-shadow: 0px 0px 4px white;
+  box-shadow: 0 0 5px #FFF, 0 0 5px #FFF inset;
+  transition: all ease-in .2s;
 }
 
 button:hover {
@@ -40,7 +41,7 @@ button:hover {
 .active-btn {
   color: white;
   background-color: #0385d6;
-  box-shadow: 0px 0px 12px white;
+  box-shadow: 0px 0px 12px rgb(255, 175, 175);
 }
 
 .container {

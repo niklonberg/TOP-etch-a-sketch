@@ -1,11 +1,11 @@
 .grid-item {
-  background-color: rgb(180, 178, 178);
+  background-color: rgb(255, 255, 255);
   flex-grow: 0;
   flex-shrink: 1;
 }
 
 .chosen-color {
-  background-color: white;
+  background-color: rgb(77, 199, 211);
 }
 
 .rainbow-color {

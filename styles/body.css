@@ -2,26 +2,26 @@
   --color1: rgb(44, 0, 60);
   --color2: rgb(40, 15, 122);
   --color3: rgb(107, 33, 122);
-  --gradient: linear-gradient(90deg, var(--color1), var(--color2), var(--color3));
+  --gradient: linear-gradient(225deg, var(--color1), var(--color2), var(--color3));
 }
 
 body {
   margin: 0;
   color: #fff;
   background: var(--gradient);
-  background-size: 400%;
-  animation: color-morph 30s ease alternate infinite;
+  background-size: 400% 400%;
+  animation: color-morph 5s ease infinite;
   font-family: 'Indie Flower', cursive;
 }
 
 @keyframes color-morph {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 50% 0%;
+    background-position: 0% 0%;
   }
 }
