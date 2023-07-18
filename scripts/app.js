@@ -66,19 +66,11 @@ buttonModes.addEventListener('click', (event) => {
 
 gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target
-  let mode;
-
-  if (modeMang.colorMode) {
-    mode = colorMang.colorMode;
-  } else if (modeMang.rainbowMode) {
-    mode = colorMang.rainbowMode;
-  } else if (modeMang.eraserMode) {
-    mode = colorMang.eraserMode;
-  }
+  let drawMode = modeMang.setMode(colorMang)
 
   if (element.classList.contains("grid-item")) {
     console.log(event)
-    mode(element)
+    drawMode(element)
   }
 })
 

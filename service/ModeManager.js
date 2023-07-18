@@ -16,6 +16,18 @@ class ModeManager {
       }
     }
   }
+
+  setMode(manager) {
+    let mode;
+    if (this.colorMode) {
+      mode = manager.colorMode;
+    } else if (this.rainbowMode) {
+      mode = manager.rainbowMode;
+    } else if (this.eraserMode) {
+      mode = manager.eraserMode;
+    }
+    return mode
+  }
 }
 
 export default ModeManager
