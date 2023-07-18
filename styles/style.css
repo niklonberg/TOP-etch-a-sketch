@@ -10,6 +10,7 @@ h2 {
   text-align: center;
   margin-top: -2rem;
   margin-bottom: -1rem;
+  padding: 0 1rem;
 }
 
 p, label, span {
@@ -45,11 +46,10 @@ button:hover {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   border: 2px solid yellow;
-  height: 100vh;
 }
 
 .grid-container {
