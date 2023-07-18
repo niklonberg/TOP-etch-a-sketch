@@ -64,7 +64,7 @@ buttonModes.addEventListener('click', (event) => {
   console.log(modeMang)
 });
 
-gridContainer.addEventListener('click', (event) => {
+gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target
   let mode;
 

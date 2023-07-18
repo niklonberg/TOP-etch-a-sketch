@@ -3,17 +3,22 @@ class ColorManager {
   }
 
   colorMode(element) {
-    /* element.style.backgroundColor = "red"; */
     element.classList.add("chosen-color")
   }
 
   rainbowMode(element) {
-    // element.style.backgroundColor = "blue";
     element.classList.add("rainbow-color")
   }
 
-  eraserMode() {
-
+  eraserMode(element) {
+    const elementClasses = Array.from(element.classList);
+    elementClasses.forEach(key => {
+      if (key === "grid-item") {
+        return
+      } else {
+        element.classList.remove(key)
+      }
+    })
   }
 }
 
