@@ -12,6 +12,8 @@ const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
 const buttonModes = document.querySelector(".button-modes");
+const clearBtn = document.querySelector("#clear-btn");
+const toggleBtn = document.querySelector("#toggle-grid-btn");
 
 /* functions  **********************************/
 
@@ -52,7 +54,7 @@ function createGrid() {
   }
 }
 
-/* main event listeners *****************************/
+/* event listeners *****************************/
 
 rowAmtInput.addEventListener('input', () => {
   gridContainer.innerHTML = "";
@@ -62,7 +64,6 @@ rowAmtInput.addEventListener('input', () => {
 buttonModes.addEventListener('click', (event) => {
   modeMang.setModeKeys(event)
   drawMode = modeMang.setMode(colorMang)
-  console.log(modeMang)
 });
 
 gridContainer.addEventListener('mouseover', (event) => {
@@ -72,6 +73,13 @@ gridContainer.addEventListener('mouseover', (event) => {
     console.log(event)
     drawMode(element)
   }
+})
+
+clearBtn.addEventListener('click', () => {
+  const gridChildElements = gridContainer.childNodes;
+  gridChildElements.forEach((child) => {
+    child.className = "grid-item";
+  })
 })
 
 /* app *****************************************/
