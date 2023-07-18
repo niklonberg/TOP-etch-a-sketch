@@ -77,9 +77,16 @@ button:hover {
 }
 
 .button-modes {
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
   border: 2px solid red;
+}
+
+/* media querys */
+
+@media (min-width:800px) {
+  .main-app-flex {
+    display: flex;
+  }
 }
