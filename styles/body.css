@@ -11,6 +11,7 @@ body {
   background: var(--gradient);
   background-size: 400%;
   animation: color-morph 30s ease alternate infinite;
+  font-family: 'Indie Flower', cursive;
 }
 
 @keyframes color-morph {
