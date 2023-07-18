@@ -9,7 +9,7 @@ h1 {
 h2 {
   text-align: center;
   margin-top: -2rem;
-  margin-bottom: -1.2rem;
+  margin-bottom: -1rem;
 }
 
 p, label, span {
@@ -22,11 +22,25 @@ input[type="range"] {
 
 button {
   background-color: transparent;
-  color: white;
+  color: rgb(155, 155, 155);
   font-family: 'Indie Flower', cursive;
   letter-spacing: .08rem;
   padding: .5rem 1.25rem;
   border-radius: 1000px;
+  border: none;
+  box-shadow: 0px 0px 4px white;
+}
+
+button:hover {
+  background-color: #0b659d;
+  color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+
+.active-btn {
+  color: white;
+  background-color: #0385d6;
+  box-shadow: 0px 0px 12px white;
 }
 
 .container {
