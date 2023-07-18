@@ -61,12 +61,12 @@ rowAmtInput.addEventListener('input', () => {
 
 buttonModes.addEventListener('click', (event) => {
   modeMang.setModeKeys(event)
+  drawMode = modeMang.setMode(colorMang)
   console.log(modeMang)
 });
 
 gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target
-  let drawMode = modeMang.setMode(colorMang)
 
   if (element.classList.contains("grid-item")) {
     console.log(event)
@@ -76,5 +76,4 @@ gridContainer.addEventListener('mouseover', (event) => {
 
 /* app *****************************************/
 createGrid();
-
-console.log(gridContainer)
+let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variable
