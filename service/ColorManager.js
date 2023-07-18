@@ -2,12 +2,12 @@ class ColorManager {
   constructor() {
   }
 
-  colorMode() {
-
+  colorMode(element) {
+    element.style.backgroundColor = "red";
   }
 
-  rainbowMode() {
-
+  rainbowMode(element) {
+    element.style.backgroundColor = "blue";
   }
 
   eraserMode() {

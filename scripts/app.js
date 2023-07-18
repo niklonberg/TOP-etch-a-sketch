@@ -61,8 +61,27 @@ rowAmtInput.addEventListener('input', () => {
 
 buttonModes.addEventListener('click', (event) => {
   modeMang.setModeKeys(event)
+  console.log(modeMang)
 });
+
+gridContainer.addEventListener('click', (event) => {
+  const element = event.target
+  let mode;
+  if (modeMang.colorMode) {
+    mode = colorMang.colorMode;
+  } else if (modeMang.rainbowMode) {
+    mode = colorMang.rainbowMode;
+  } else if (modeMang.eraserMode) {
+    mode = colorMang.eraserMode;
+  }
+
+  if (element.className === "grid-item") {
+    console.log(event)
+    mode(element)
+  }
+})
 
 /* app *****************************************/
 createGrid();
 
+console.log(gridContainer)
