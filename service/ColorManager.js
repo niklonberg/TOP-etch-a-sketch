@@ -6,8 +6,9 @@ class ColorManager {
     element.style.backgroundColor = "blue";
   }
 
-  rainbowMode(element) {
-    element.style.backgroundColor = "red";
+  rainbowMode = (element) => {
+    const rgbVal = this.randomColor();
+    element.style.backgroundColor = `rgb(${rgbVal[0]},${rgbVal[1]},${rgbVal[2]})`;
   }
 
   eraserMode(element) {
