@@ -65,19 +65,19 @@ rowAmtInput.addEventListener('input', () => {
 buttonModes.addEventListener('click', (event) => {
   const btnElements = Array.from(buttonModes.children);
   btnElements.forEach(element => {
-    element.classList.remove('active-btn')
+    element.classList.remove('active-btn');
   })
-  event.target.classList.add('active-btn')
+  event.target.classList.add('active-btn');
   
-  modeMang.setModeKeys(event)
-  drawMode = modeMang.setMode(colorMang)
+  modeMang.setModeKeys(event);
+  drawMode = modeMang.setMode(colorMang);
 });
 
 gridContainer.addEventListener('mouseover', (event) => {
-  const element = event.target
+  const element = event.target;
 
   if (element.classList.contains("grid-item")) {
-    drawMode(element)
+    drawMode(element);
   }
 })
 
@@ -93,7 +93,7 @@ clearBtn.addEventListener('click', () => {
 })
 
 toggleGridBtn.addEventListener('click', () => {
-  toggleGridBtn.classList.toggle('active-btn')
+  toggleGridBtn.classList.toggle('active-btn');
   const gridChildElements = gridContainer.childNodes;
   gridChildElements.forEach((child) => {
     child.classList.toggle('outline');
@@ -103,3 +103,4 @@ toggleGridBtn.addEventListener('click', () => {
 /* app *****************************************/
 createGrid();
 let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variable
+
