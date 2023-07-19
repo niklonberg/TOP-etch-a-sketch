@@ -80,8 +80,10 @@ gridContainer.addEventListener('click', () => {
 gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target;
 
-  if (element.classList.contains("grid-item")) {
-    drawMode(element);
+  if (activateDraw) {
+    if (element.classList.contains("grid-item")) {
+      drawMode(element);
+    }
   }
 })
 
