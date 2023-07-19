@@ -73,6 +73,10 @@ buttonModes.addEventListener('click', (event) => {
   drawMode = modeMang.setMode(colorMang);
 });
 
+gridContainer.addEventListener('click', () => {
+  activateDraw = !activateDraw;
+})
+
 gridContainer.addEventListener('mouseover', (event) => {
   const element = event.target;
 
@@ -103,4 +107,4 @@ toggleGridBtn.addEventListener('click', () => {
 /* app *****************************************/
 createGrid();
 let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variable
-
+let activateDraw = false;
