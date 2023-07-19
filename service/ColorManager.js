@@ -2,14 +2,14 @@ class ColorManager {
   constructor() {
   }
 
-  colorMode(element) {
-    this.colorReset(element)
-    element.classList.add("chosen-color")
+  colorMode = (element) => {
+    this.colorReset(element);
+    element.style.backgroundColor = "blue";
   }
 
-  rainbowMode(element) {
-    element.classList.remove("chosen-color")
-    element.classList.add("rainbow-color")
+  rainbowMode = (element) => {
+    this.colorReset(element);
+    element.style.backgroundColor = "red";
   }
 
   eraserMode(element) {
