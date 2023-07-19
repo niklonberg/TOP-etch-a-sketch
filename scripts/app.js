@@ -2,10 +2,6 @@
 import ModeManager from "../service/ModeManager.js";
 import ColorManager from "../service/ColorManager.js";
 
-/* class instantiation */
-const modeMang = new ModeManager()
-const colorMang = new ColorManager()
-
 /* references **********************************/
 const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
 const rowAmtInput = document.querySelector('#range-items');
@@ -16,6 +12,10 @@ const clearBtn = document.querySelector("#clear-btn");
 const toggleGridBtn = document.querySelector("#toggle-grid-btn");
 const colorBtnInput = document.querySelector("#color-btn-input");
 const incrementDarkenBtn = document.querySelector("#increment-btn");
+
+/* class instantiation */
+const modeMang = new ModeManager()
+const colorMang = new ColorManager(colorBtnInput)
 
 /* functions  **********************************/
 
@@ -118,3 +118,4 @@ let activateDraw = false;
 let toggleGrid = true;
 createGrid();
 
+console.log(colorMang)

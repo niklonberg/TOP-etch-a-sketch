@@ -1,9 +1,11 @@
 class ColorManager {
-  constructor() {
+  constructor(input) {
+    this.colorBtnInput = input
   }
 
-  colorMode(element) {
-    element.style.backgroundColor = "blue";
+  colorMode = (element) => {
+    const value = this.colorBtnInput.value
+    element.style.backgroundColor = `${value}`;
   }
 
   rainbowMode = (element) => {
