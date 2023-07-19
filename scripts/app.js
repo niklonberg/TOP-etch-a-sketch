@@ -26,7 +26,10 @@ function getGridItemAmount() {
 
 function createGridItem() {
   const gridItem = document.createElement("div");
-  gridItem.classList.add("grid-item", "outline");
+  gridItem.classList.add("grid-item");
+  if (toggleGrid) {
+    gridItem.classList.add("outline");
+  }
   return gridItem;
 }
 
@@ -99,7 +102,9 @@ clearBtn.addEventListener('click', () => {
 })
 
 toggleGridBtn.addEventListener('click', () => {
+  toggleGrid = !toggleGrid;
   toggleGridBtn.classList.toggle('active-btn');
+  
   const gridChildElements = gridContainer.childNodes;
   gridChildElements.forEach((child) => {
     child.classList.toggle('outline');
@@ -107,6 +112,8 @@ toggleGridBtn.addEventListener('click', () => {
 })
 
 /* app *****************************************/
-createGrid();
 let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variable
 let activateDraw = false;
+let toggleGrid = true;
+createGrid();
+
