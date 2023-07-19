@@ -14,6 +14,7 @@ const gridContainer = document.querySelector(".grid-container");
 const buttonModes = document.querySelector(".button-modes");
 const clearBtn = document.querySelector("#clear-btn");
 const toggleGridBtn = document.querySelector("#toggle-grid-btn");
+const colorBtnInput = document.querySelector("#color-btn-input");
 const incrementDarkenBtn = document.querySelector("#increment-btn");
 
 /* functions  **********************************/
@@ -113,7 +114,7 @@ toggleGridBtn.addEventListener('click', () => {
 
 /* app *****************************************/
 let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variable
-let activateDraw = false;
+let activateDraw = false;   
 let toggleGrid = true;
 createGrid();
 
