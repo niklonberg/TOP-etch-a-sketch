@@ -3,7 +3,7 @@ class ColorManager {
   }
 
   colorMode(element) {
-    element.classList.remove("rainbow-color")
+    this.colorReset(element)
     element.classList.add("chosen-color")
   }
 
@@ -21,6 +21,10 @@ class ColorManager {
         element.classList.remove(cssClass)
       }
     })
+  }
+
+  colorReset(element) {
+    element.style.backgroundColor = "";
   }
 
   randomColor() {
