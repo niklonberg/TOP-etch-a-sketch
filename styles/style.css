@@ -4,12 +4,12 @@
 
 h1 {
   text-shadow: 0 0 6px #fff;
+  text-align: center;
 }
 
-h2 {
+.sub-title {
   text-align: center;
-  margin-top: -2rem;
-  margin-bottom: -1rem;
+  margin-top: -1rem;
   padding: 0 1rem;
 }
 
@@ -63,17 +63,17 @@ button:hover {
   flex-flow: row wrap;
 }
 
-.main-flex {
+.main-app-flex {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
-.col {
+.toggles {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
+  outline: 2px solid pink;
 }
 
 .button-modes {
@@ -81,6 +81,19 @@ button:hover {
   justify-content: center;
   gap: 1rem;
   border: 2px solid red;
+}
+
+.alt-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* media querys */
@@ -94,12 +107,13 @@ button:hover {
 
 @media (min-width:950px) {
   .main-app-flex {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     gap: 2rem;
   }
 
   .grid-container {
+    margin: 0;
     width: 600px;
     height: 600px;
   }
@@ -107,4 +121,9 @@ button:hover {
   .button-modes {
     flex-direction: column;
   }
+
+  .toggles {
+    justify-content: space-around;
+  }
+
 }

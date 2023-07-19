@@ -12,25 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container main-flex">
+    <main class="container">
         <h1>Etch - a - Sketch</h1>
-        <h2>Choose a coloring mode below and have fun!</h2>
+        <h2 class="sub-title">Choose a coloring mode below and have fun!</h2>
         <div class="main-app-flex">
             <div class='grid-container'></div>
-            <div class="slider col">
-                <label for="input-div">Length of row</label>
-                <input type="range" id="range-items" value="16" min="2" max="100"></input>
-                <span id="range-value"></span>
-            </div>
-            <div class="button-modes">
-                <button id="color-btn" class="active-btn" data-key="colorMode">Color Mode</button>
-                <button id="rainbow-btn" data-key="rainbowMode">Rainbow Mode</button>
-                <button id="eraser-btn" data-key="eraserMode">Eraser Mode</button>
+            <div class="toggles">
+                <div class="slider">
+                    <label for="input-div">Length of row</label>
+                    <input type="range" id="range-items" value="16" min="2" max="100"></input>
+                    <span id="range-value"></span>
+                </div>
+                <div class="button-modes">
+                    <button id="color-btn" class="active-btn" data-key="colorMode">Color Mode</button>
+                    <button id="rainbow-btn" data-key="rainbowMode">Rainbow Mode</button>
+                    <button id="eraser-btn" data-key="eraserMode">Eraser Mode</button>
+                </div>
+                <div class="alt-buttons">
+                    <button id="increment-btn">Incrementally Darken</button>
+                    <button id="clear-btn">Clear</button>
+                    <button id="toggle-grid-btn" class="active-btn">Toggle Grid Outline</button>
+                </div>
             </div>
         </div>
-        <button id="increment-btn">Incrementally Darken</button>
-        <button id="clear-btn">Clear</button>
-        <button id="toggle-grid-btn" class="active-btn">Toggle Grid Outline</button>
     </main>
     <script type="module" src="scripts/app.js" defer></script>
 </body>
