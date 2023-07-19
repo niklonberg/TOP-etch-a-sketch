@@ -2,28 +2,15 @@ class ColorManager {
   constructor() {
   }
 
-  colorMode = (element) => {
-    this.colorReset(element);
+  colorMode(element) {
     element.style.backgroundColor = "blue";
   }
 
-  rainbowMode = (element) => {
-    this.colorReset(element);
+  rainbowMode(element) {
     element.style.backgroundColor = "red";
   }
 
   eraserMode(element) {
-    const elementClasses = Array.from(element.classList);
-    elementClasses.forEach(cssClass => {
-      if (cssClass === "grid-item" || cssClass === "outline") {
-        return
-      } else {
-        element.classList.remove(cssClass)
-      }
-    })
-  }
-
-  colorReset(element) {
     element.style.backgroundColor = "";
   }
 
@@ -38,3 +25,14 @@ class ColorManager {
 }
 
 export default ColorManager
+
+// eraserMode(element) {
+//   const elementClasses = Array.from(element.classList);
+//   elementClasses.forEach(cssClass => {
+//     if (cssClass === "grid-item" || cssClass === "outline") {
+//       return
+//     } else {
+//       element.classList.remove(cssClass)
+//     }
+//   })
+// }
