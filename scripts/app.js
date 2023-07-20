@@ -85,6 +85,7 @@ buttonModes.addEventListener('click', (event) => {
   btnElements.forEach(element => {
     element.classList.remove('active-btn');    
   })
+  
   if (event.target.id !== 'color-btn-input') {
     event.target.classList.add('active-btn');
   }
