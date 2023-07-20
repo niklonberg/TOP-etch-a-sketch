@@ -66,17 +66,6 @@ rowAmtInput.addEventListener('input', () => {
   createGrid();
 });
 
-buttonModes.addEventListener('click', (event) => {
-  const btnElements = Array.from(buttonModes.children);
-  btnElements.forEach(element => {
-    element.classList.remove('active-btn');
-  })
-  event.target.classList.add('active-btn');
-  
-  modeMang.setModeKeys(event);
-  drawMode = modeMang.setMode(colorMang);
-});
-
 gridContainer.addEventListener('click', () => {
   activateDraw = !activateDraw;
 })
@@ -89,6 +78,23 @@ gridContainer.addEventListener('mouseover', (event) => {
       drawMode(element);
     }
   }
+})
+
+buttonModes.addEventListener('click', (event) => {
+  const btnElements = Array.from(buttonModes.children);
+  btnElements.forEach(element => {
+    element.classList.remove('active-btn');    
+  })
+  if (event.target.id !== 'color-btn-input') {
+    event.target.classList.add('active-btn');
+  }
+  
+  modeMang.setModeKeys(event);
+  drawMode = modeMang.setMode(colorMang);
+});
+
+colorBtnInput.addEventListener('click', (event) => {
+  event.stopPropagation();
 })
 
 incrementDarkenBtn.addEventListener('click', () => {
