@@ -20,7 +20,6 @@ class ColorManager {
 
   rainbowMode = (element) => {
     const rgbArray = this.randomColor();
-    console.log(rgbArray)
     element.classList.add("colored");
     element.style.backgroundColor = `rgb(${rgbArray[0]},${rgbArray[1]},${rgbArray[2]})`;
   }
@@ -46,7 +45,7 @@ class ColorManager {
     const r = parseInt(value.substring(0, 2), 16);
     const g = parseInt(value.substring(2, 4), 16);
     const b = parseInt(value.substring(4), 16);
-    
+
     rgbArray.push(r, g, b);
     return rgbArray
   }
@@ -54,19 +53,7 @@ class ColorManager {
   incrementDarken(rgbArray, element) {
     console.log(element.style.backgroundColor)
   }
-
-
 }
 
 export default ColorManager
 
-// eraserMode(element) {
-//   const elementClasses = Array.from(element.classList);
-//   elementClasses.forEach(cssClass => {
-//     if (cssClass === "grid-item" || cssClass === "outline") {
-//       return
-//     } else {
-//       element.classList.remove(cssClass)
-//     }
-//   })
-// }
