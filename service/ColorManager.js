@@ -18,19 +18,22 @@ class ColorManager {
     console.log(rgbArray);
     if (this.incrementDarkenState) {
       if (element.classList.contains('colored')) {
-
+        this.incrementDarken(rgbArray, element);
       }
     }
+    element.classList.add("colored");
     element.style.backgroundColor = `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
   }
 
   rainbowMode = (element) => {
     const rgbArray = this.randomColor();
     console.log(rgbArray)
+    element.classList.add("colored");
     element.style.backgroundColor = `rgb(${rgbArray[0]},${rgbArray[1]},${rgbArray[2]})`;
   }
 
   eraserMode(element) {
+    element.classList.remove("colored");
     element.style.backgroundColor = "";
   }
 
@@ -43,7 +46,8 @@ class ColorManager {
     return rgbArray
   }
 
-  incrementDarken(rgbArray) {
+  incrementDarken(rgbArray, element) {
+
   }
 }
 

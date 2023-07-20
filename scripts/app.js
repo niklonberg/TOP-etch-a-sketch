@@ -75,7 +75,6 @@ gridContainer.addEventListener('mouseover', (event) => {
 
   if (activateDraw) {
     if (element.classList.contains("grid-item")) {
-      element.classList.add("colored");
       drawMode(element);
     }
   }
