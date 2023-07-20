@@ -110,13 +110,16 @@ button:hover {
   content: "Click to start/stop";
   position: absolute;
   background-color: black;
+  padding: 0 .5rem;
+  border-radius: 100px;
   left: 50%;
   transform: translateX(-50%);
-  top:-10px;
+  top:-12px;
   opacity: 0;
 }
 
 .grid-container:hover::before {
+  animation: fadeIn 1s;
   opacity: 1;
 }
 
