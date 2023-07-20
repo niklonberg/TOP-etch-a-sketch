@@ -5,6 +5,7 @@ class ColorManager {
   }
 
   colorMode = (element) => {
+    const rgbArray = [];
     const inputHexValue = this.colorBtnInput.value
     console.log(inputHexValue)
     const value = inputHexValue.replace("#", "");
@@ -13,14 +14,18 @@ class ColorManager {
     const g = parseInt(value.substring(2, 4), 16);
     const b = parseInt(value.substring(4), 16);
     console.log(r, g, b)
-    
-    element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    rgbArray.push(r, g, b);
+    console.log(rgbArray);
+    if (this.incrementDarken) {
+      
+    }
+    element.style.backgroundColor = `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
   }
 
   rainbowMode = (element) => {
-    const rgbVal = this.randomColor();
-    console.log(rgbVal)
-    element.style.backgroundColor = `rgb(${rgbVal[0]},${rgbVal[1]},${rgbVal[2]})`;
+    const rgbArray = this.randomColor();
+    console.log(rgbArray)
+    element.style.backgroundColor = `rgb(${rgbArray[0]},${rgbArray[1]},${rgbArray[2]})`;
   }
 
   eraserMode(element) {
@@ -34,6 +39,9 @@ class ColorManager {
     const b = Math.floor(Math.random() * 256)
     rgbArray.push(r, g, b);
     return rgbArray
+  }
+
+  incrementDarken(rgbArray) {
   }
 }
 
