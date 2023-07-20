@@ -16,8 +16,10 @@ class ColorManager {
     console.log(r, g, b)
     rgbArray.push(r, g, b);
     console.log(rgbArray);
-    if (this.incrementDarken) {
-      
+    if (this.incrementDarkenState) {
+      if (element.classList.contains('colored')) {
+
+      }
     }
     element.style.backgroundColor = `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
   }
