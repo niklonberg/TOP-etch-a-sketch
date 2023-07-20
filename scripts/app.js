@@ -84,7 +84,7 @@ buttonModes.addEventListener('click', (event) => {
   const btnElements = Array.from(buttonModes.children);
   btnElements.forEach(element => {
     element.classList.remove('active-btn');  
-    colorBtnInput.classList.remove('show')  
+    colorBtnInput.classList.remove('show'); 
   })
 
   event.target.classList.add('active-btn');
@@ -108,7 +108,7 @@ incrementDarkenBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
   const gridChildElements = gridContainer.childNodes;
   gridChildElements.forEach((child) => {
-    child.className = "grid-item";
+    child.style.backgroundColor = ""
   })
 })
 
