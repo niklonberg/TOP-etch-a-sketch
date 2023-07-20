@@ -1,7 +1,7 @@
 class ColorManager {
   constructor(input) {
     this.colorBtnInput = input;
-    this.incrementDarken = false;
+    this.incrementDarkenState = false;
   }
 
   colorMode = (element) => {
