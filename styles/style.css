@@ -95,6 +95,7 @@ button:hover {
 }
 
 .grid-container {
+  position: relative;
   margin: 0 auto;
   padding: 1rem;
   box-shadow: 0px 0px 15px white;
@@ -103,6 +104,20 @@ button:hover {
   height: 300px;
   display: flex;
   flex-flow: row wrap;
+}
+
+.grid-container::before {
+  content: "Click to start/stop";
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  top:-10px;
+  opacity: 0;
+}
+
+.grid-container:hover::before {
+  opacity: 1;
 }
 
 .main-app-flex {

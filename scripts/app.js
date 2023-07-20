@@ -108,7 +108,7 @@ incrementDarkenBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
   const gridChildElements = gridContainer.childNodes;
   gridChildElements.forEach((child) => {
-    child.style.backgroundColor = ""
+    child.style.backgroundColor = "";
   })
 })
 
