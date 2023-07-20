@@ -4,12 +4,20 @@ class ColorManager {
   }
 
   colorMode = (element) => {
-    const value = this.colorBtnInput.value
-    element.style.backgroundColor = `${value}`;
+    const inputHexValue = this.colorBtnInput.value
+    console.log(inputHexValue)
+    const value = inputHexValue.replace("#", "");
+    console.log(value)
+    const r = parseInt(value.substring(0, 2), 16);
+    const g = parseInt(value.substring(2, 4), 16);
+    const b = parseInt(value.substring(4), 16);
+    console.log(r, g, b)
+    element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
 
   rainbowMode = (element) => {
     const rgbVal = this.randomColor();
+    console.log(rgbVal)
     element.style.backgroundColor = `rgb(${rgbVal[0]},${rgbVal[1]},${rgbVal[2]})`;
   }
 
