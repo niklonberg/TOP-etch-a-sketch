@@ -1,6 +1,7 @@
 class ColorManager {
   constructor(input) {
-    this.colorBtnInput = input
+    this.colorBtnInput = input;
+    this.incrementDarken = false;
   }
 
   colorMode = (element) => {
@@ -12,6 +13,7 @@ class ColorManager {
     const g = parseInt(value.substring(2, 4), 16);
     const b = parseInt(value.substring(4), 16);
     console.log(r, g, b)
+    
     element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
 

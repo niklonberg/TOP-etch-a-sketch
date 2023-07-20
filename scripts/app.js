@@ -101,8 +101,9 @@ colorBtnInput.addEventListener('click', (event) => {
   event.stopPropagation();
 })
 
-incrementDarkenBtn.addEventListener('click', () => {
-
+incrementDarkenBtn.addEventListener('click', (event) => {
+  event.target.classList.toggle('active-btn');
+  colorMang.incrementDarken = !colorMang.incrementDarken;
 })
 
 clearBtn.addEventListener('click', () => {
