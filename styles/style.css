@@ -45,7 +45,7 @@ input[type="color"]::-moz-color-swatch {
 }
 
 #color-btn #color-btn-input {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: absolute;
   bottom: 125%;
   left: 50%;
@@ -119,7 +119,7 @@ button:hover {
 }
 
 .show {
-  visibility: visible;
+  visibility: visible !important; 
   animation: fadeIn 1s;
 }
 

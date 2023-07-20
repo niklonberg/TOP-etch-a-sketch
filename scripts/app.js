@@ -83,11 +83,14 @@ gridContainer.addEventListener('mouseover', (event) => {
 buttonModes.addEventListener('click', (event) => {
   const btnElements = Array.from(buttonModes.children);
   btnElements.forEach(element => {
-    element.classList.remove('active-btn');    
+    element.classList.remove('active-btn');  
+    colorBtnInput.classList.remove('show')  
   })
-  
-  if (event.target.id !== 'color-btn-input') {
-    event.target.classList.add('active-btn');
+
+  event.target.classList.add('active-btn');
+
+  if (event.target.id === 'color-btn') {
+    colorBtnInput.classList.add('show');    
   }
   
   modeMang.setModeKeys(event);
