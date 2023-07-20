@@ -5,17 +5,10 @@ class ColorManager {
   }
 
   colorMode = (element) => {
-    const rgbArray = [];
-    const inputHexValue = this.colorBtnInput.value
-    console.log(inputHexValue)
-    const value = inputHexValue.replace("#", "");
-    console.log(value)
-    const r = parseInt(value.substring(0, 2), 16);
-    const g = parseInt(value.substring(2, 4), 16);
-    const b = parseInt(value.substring(4), 16);
-    console.log(r, g, b)
-    rgbArray.push(r, g, b);
-    console.log(rgbArray);
+    const inputHexValue = this.colorBtnInput.value;
+    
+    const rgbArray = this.convertHexToRgb(inputHexValue);
+
     if (this.incrementDarkenState) {
       if (element.classList.contains('colored')) {
         this.incrementDarken(rgbArray, element);
@@ -46,9 +39,23 @@ class ColorManager {
     return rgbArray
   }
 
-  incrementDarken(rgbArray, element) {
-
+  convertHexToRgb(inputHexValue) {
+    const rgbArray = [];
+    const value = inputHexValue.replace("#", "");
+    
+    const r = parseInt(value.substring(0, 2), 16);
+    const g = parseInt(value.substring(2, 4), 16);
+    const b = parseInt(value.substring(4), 16);
+    
+    rgbArray.push(r, g, b);
+    return rgbArray
   }
+
+  incrementDarken(rgbArray, element) {
+    console.log(element.style.backgroundColor)
+  }
+
+
 }
 
 export default ColorManager
