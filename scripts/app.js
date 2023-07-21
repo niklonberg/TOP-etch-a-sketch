@@ -3,7 +3,7 @@ import ModeManager from "../service/ModeManager.js";
 import ColorManager from "../service/ColorManager.js";
 
 /* references **********************************/
-const gridItemStylesheet = document.querySelector('link[href="/styles/gridItem.css"]').sheet;
+const gridItemStylesheet = document.querySelector('link[href="styles/gridItem.css"]').sheet;
 const rowAmtInput = document.querySelector('#range-items');
 const rangeValueSpan = document.querySelector('#range-value');
 const gridContainer = document.querySelector(".grid-container");
@@ -128,5 +128,3 @@ let drawMode = modeMang.setMode(colorMang) //set starting global drawMode variab
 let activateDraw = false;   
 let toggleGrid = true;
 createGrid();
-
-console.log(colorMang)
