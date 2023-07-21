@@ -21,10 +21,14 @@ class ColorManager {
   incrementDarken(element) {
     const elementsRgbStr = element.style.backgroundColor;
     console.log(elementsRgbStr);
-    const rgbStr = elementsRgbStr.substring(4, elementsRgbStr.length - 1)
-    console.log(valuesStr);
-    const strValuesArr = rgbStr.split(", ");
+    const strValuesArr = elementsRgbStr.substring(4, elementsRgbStr.length - 1).split(", ")
     console.log(strValuesArr);
+    const intRgbValuesArr = []
+    strValuesArr.forEach(strVal => intRgbValuesArr.push(parseInt(strVal)));
+    console.log(intRgbValuesArr);
+    intRgbValuesArr.map((val) => {
+      
+    })
   }
 
   rainbowMode = (element) => {
