@@ -15,7 +15,7 @@ class ColorManager {
     } else if (this.incrementDarkenState) {
       if (element.classList.contains('colored')) {
         this.incrementDarken(element);
-      } else {
+      } else if (!element.classList.contains('colored')) {
         element.classList.add("colored");
         element.style.backgroundColor = `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
       }
@@ -27,9 +27,7 @@ class ColorManager {
     const strValuesArr = elementsRgbStr.substring(4, elementsRgbStr.length - 1).split(", ")
     const intRgbValuesArr = [];
     strValuesArr.forEach(strVal => intRgbValuesArr.push(parseInt(strVal)));
-    console.log(intRgbValuesArr);
     const reducedBy10Percent = intRgbValuesArr.map(val => Math.floor(val * 0.9));
-    console.log(reducedBy10Percent);
     element.style.backgroundColor = `rgb(${reducedBy10Percent[0]}, ${reducedBy10Percent[1]}, ${reducedBy10Percent[2]})`;
   }
 
