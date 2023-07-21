@@ -11,11 +11,20 @@ class ColorManager {
 
     if (this.incrementDarkenState) {
       if (element.classList.contains('colored')) {
-        this.incrementDarken(rgbArray, element);
+        this.incrementDarken(element);
       }
     }
     element.classList.add("colored");
     element.style.backgroundColor = `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
+  }
+
+  incrementDarken(element) {
+    const elementsRgbStr = element.style.backgroundColor;
+    console.log(elementsRgbStr);
+    const rgbStr = elementsRgbStr.substring(4, elementsRgbStr.length - 1)
+    console.log(valuesStr);
+    const strValuesArr = rgbStr.split(", ");
+    console.log(strValuesArr);
   }
 
   rainbowMode = (element) => {
@@ -48,10 +57,6 @@ class ColorManager {
 
     rgbArray.push(r, g, b);
     return rgbArray
-  }
-
-  incrementDarken(rgbArray, element) {
-    console.log(element.style.backgroundColor)
   }
 }
 
