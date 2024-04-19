@@ -9,7 +9,7 @@ h1 {
 
 .sub-title {
   text-align: center;
-  margin-top: -1rem;
+  margin-block: -1rem 4rem;
   padding: 0 1rem;
 }
 
