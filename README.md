@@ -14,6 +14,6 @@ Hold click & paint to your hearts content!
 Color mode - user can pick color.  
 Rainbow mode - randomized colors!  
 Eraser mode - every artist makes an error here or there.  
-Incrementally darken mode - a pixel with get 10% darker each time it is painted on.  
-Clear & toggle outline buttons.
+Incrementally darken mode - a pixel will get 10% darker each time it is painted on.  
+Clear & toggle grid outline buttons.
 Fully responsive.
