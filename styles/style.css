@@ -13,7 +13,10 @@ h1 {
   padding: 0 1rem;
 }
 
-p, label, span {
+p,
+button,
+label,
+span {
   font-size: 1.3rem;
 }
 
@@ -66,13 +69,13 @@ input[type="color"]::-moz-color-swatch {
 button {
   background-color: transparent;
   color: rgb(155, 155, 155);
-  font-family: 'Indie Flower', cursive;
-  letter-spacing: .08rem;
-  padding: .5rem 1.25rem;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 0.08rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 1000px;
   border: none;
-  box-shadow: 0 0 5px #FFF, 0 0 5px #FFF inset;
-  transition: all ease-in .2s;
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff inset;
+  transition: all ease-in 0.2s;
 }
 
 button:hover {
@@ -107,13 +110,14 @@ button:hover {
 
 .grid-container::before {
   content: "Click to start/stop";
+  font-size: 20px;
   position: absolute;
   background-color: black;
-  padding: 0 .5rem;
+  padding: 5px 10px;
   border-radius: 100px;
   left: 50%;
   transform: translateX(-50%);
-  top:-12px;
+  top: -12px;
   opacity: 0;
 }
 
@@ -135,7 +139,7 @@ button:hover {
 }
 
 .show {
-  visibility: visible !important; 
+  visibility: visible !important;
   animation: fadeIn 1s;
 }
 
@@ -170,14 +174,14 @@ button:hover {
 
 /* media querys */
 
-@media (min-width:600px) {
+@media (min-width: 600px) {
   .grid-container {
     width: 500px;
     height: 500px;
   }
 }
 
-@media (min-width:950px) {
+@media (min-width: 950px) {
   .main-app-flex {
     flex-direction: row;
     justify-content: center;
@@ -197,5 +201,4 @@ button:hover {
   .toggles {
     justify-content: space-around;
   }
-
 }
