@@ -10,7 +10,7 @@ This site is hosted via github pages, and can be found here: https://niklonberg.
 
 A functioning etch-a-sketch app.  
 Amount of 'pixels' is adjustable.  
-Hold click & paint to your hearts content!
+Hold click & paint to your hearts content!  
 Color mode - user can pick color.  
 Rainbow mode - randomized colors!  
 Eraser mode - every artist makes an error here or there.  
