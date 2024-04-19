@@ -2,7 +2,12 @@
   --color1: rgb(44, 0, 60);
   --color2: rgb(40, 15, 122);
   --color3: rgb(107, 33, 122);
-  --gradient: linear-gradient(225deg, var(--color1), var(--color2), var(--color3));
+  --gradient: linear-gradient(
+    225deg,
+    var(--color1),
+    var(--color2),
+    var(--color3)
+  );
 }
 
 body {
@@ -10,8 +15,8 @@ body {
   color: #fff;
   background: var(--gradient);
   background-size: 400% 400%;
-  animation: color-morph 5s ease infinite;
-  font-family: 'Indie Flower', cursive;
+  animation: color-morph 12s ease infinite;
+  font-family: "Indie Flower", cursive;
 }
 
 @keyframes color-morph {
